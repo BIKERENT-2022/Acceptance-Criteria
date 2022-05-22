@@ -1,0 +1,14 @@
+Scenario 1: Registro de datos de cliente válido.
+GIVEN me encuentro en el interfaz de registro
+WHEN ingrese los datos solicitados de forma correcta (sin dejar espacios en blanco e información verdadera)
+THEN me saldrá un mensaje de registro exitoso y me redirigirá a la página de inicio donde podré adquirir bicicletas o accesorios.
+
+Scenario 2:Registro de datos de cliente inválido.
+GIVEN me encuentro en el interfaz de registro
+WHEN no ingrese los datos solicitados de forma correcta (dejando espacios en blanco e información falsa)
+THEN me saldrá un mensaje de registro sin éxito y me pedirá ingresar nuevamente los datos.
+
+Scenario 3: Registro de datos de usuario en blanco.
+GIVEN me encuentro en el interfaz de registro
+WHEN no ingrese todos los datos solicitados de forma correcta (dejando espacios en blanco)
+THEN me saldrá un mensaje que me pedirá llenar todos los campos.
