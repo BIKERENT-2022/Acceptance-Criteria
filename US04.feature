@@ -1,8 +1,9 @@
-    Scenario: Recuperar contraseña.
-    Given me encuentro en el interfaz de registro o iniciar sesion
-     When seleccione recuperar contraseña
-     Then me aparecera una ventana donde podre recuperarla, mediante el ingreso de mi correo electronico.
-    Scenario: Modificar contraseña.
-    Given me encuentro en el interfaz de registro o iniciar sesion
-     When seleccione modificar contraseña
-     Then me aparecera una ventana donde podre cambiarla, mediante el ingreso de mi contraseña actual y el ingreso de la nueva contraseña. En caso me haya olvidado, podre recuperarla.
+Scenario: Eliminación de datos de empresa válido.
+Given me encuentro en el interfaz de registro de empresa
+When seleccione la opción de eliminar empresa
+Then me saldrá un mensaje de eliminación de empresa exitosa.
+Scenario: Eliminación de datos de empresa válido.
+Given me encuentro en el interfaz de registro de empresa
+When seleccione la opción de eliminar empresa
+Then me saldrá un mensaje de eliminación de empresa fallida.
+
