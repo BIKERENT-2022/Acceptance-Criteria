@@ -1,10 +1,11 @@
-Scenario: Selección de método de pago exitoso
-    Given me encuentro en la interfaz de Finalización de alquiler
-    When seleccione la opción de escoger método de pago
-    Then me aparecerá la opción de pago en efectivo o por medio de tarjeta de crédito.
+Scenario: Revisión de solicitudes exitoso.
+    Given me encuentro en la interfaz de reserva 
+    When seleccione la opción de solicitudes 
+    Then podré visualizar las peticiones de alquiler de bicicletas de los clientes, 
+    And así realizarlo luego de mi confirmación.
 
-Scenario: Selección de método de pago no exitoso
-    Given me encuentro en la interfaz de Finalización de alquiler
-    When seleccione la opción de escoger método de pago
-    And ocurra un problema
-    Then me aparecerá el mensaje de “Vuelva a intentar o seleccione otro método de pago”.
+Scenario: Revisión de solicitudes no exitoso.
+    Given me encuentro en la interfaz de reserva 
+    When seleccione la opción de solicitudes
+    And este no cargue o se ralentice 
+    Then me aparecerá el mensaje de “Intente revisar más tarde”.
