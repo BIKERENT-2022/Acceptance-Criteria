@@ -1,10 +1,11 @@
-    Scenario: Creación exitosa.
-    Given me encuentro en la interfaz de foros
-     When seleccione la opción de modificar 
-     Then editar los artículos existentes dentro del foro, así como agregar nuevos. 
-    Scenario: Creación  no exitosa.
-    Given me encuentro en la interfaz de foros 
-     When seleccione la opción de modificar y ocurra un problema 
-     Then me aparecerá el mensaje de “Error en la creación/modificación de artículos”.
-
-    
+    Scenario: Eliminación de ubicación exitosa.
+     Given que me encuentro en la interfaz de perfil 
+     When seleccione el icono del recuadro de al lado de la ubicación
+     And luego seleccione el icono de “-”
+     Then se eliminará la ubicación seleccionada.
+     
+    Scenario: Eliminación de ubicación no exitosa.
+     Given que me encuentro en la interfaz de perfil 
+     When no seleccione el icono del recuadro de al lado de la ubicación
+     And luego seleccione el icono de “-”
+     Then no se eliminará la ubicación.    
