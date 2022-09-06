@@ -1,9 +1,11 @@
-Scenario: Ofertas para clientes en plan Free.
-    Given me encuentro en la interfaz de modelos de bicicletas
-    When seleccione la opción de modificar e intente cambiar el precio 
-    Then podré rebajarlo u ofrecer un descuento por tiempo limitado de ciertas bicicletas.
+Scenario: Cupón y asignación exitosa.
+    Given que me encuentro en la interfaz de clientes Premium
+    When seleccione la opción de asignar cupón
+    And seleccione al cliente
+    Then podré ofrecer un descuento en el plan a los Clientes Premium por periodos determinados.
 
-Scenario: Ofertas para clientes en plan Premium.
-    Given me encuentro en la interfaz de modelos de bicicletas 
-    When seleccione la opción de modificar e intente cambiar el precio 
-    Then podré rebajarlo u ofrecer un descuento por tiempo prolongado y por todas las bicicletas en stock.
+Scenario: Cupón y asignación no exitosa.
+    Given que me encuentro en la interfaz clientes Premium
+    When seleccione la opción de asignar cupón
+    And seleccione al cliente, pero ocurra un error
+    Then no podré ofrecer un descuento en el plan a los Clientes Premium por periodos determinados.
