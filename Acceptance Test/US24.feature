@@ -1,10 +1,13 @@
-Scenario: Participaciones
-    Given me encuentro en la interfaz de foros
-    When añada uno o más comentarios 
-    Then estaré participando en el foro de la plataforma
+Scenario: Añadir ubicación exitosa
+    Given me encuentro en la interfaz de perfil
+    When seleccione el icono de “+”
+    And añada la información de la ubicación
+    And seleccione añadir
+    Then se habrá añadido una nueva ubicación en caso de querer cambiarla en algún momento.
 
-Scenario: Calificación
-    Given me encuentro en la interfaz de foros
-    When marque un nivel (1-5) como calificación para la plataforma
-    And seleccione el botón “Calificar”
-    Then saldrá un mensaje indicando “Calificación exitosa”
+Scenario: Añadir ubicación no exitosa.
+    Given me encuentro en la interfaz de perfil 
+    When selecciono el icono de “+”
+    And añada la información de la ubicación de manera incorrecta o no la complete
+    And seleccione añadir
+    Then aparecerá un mensaje como: “Ubicación no añadida, inténtelo nuevamente”.
