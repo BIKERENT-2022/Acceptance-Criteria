@@ -1,8 +1,9 @@
-    Scenario: Solicitud exitosa.
-    Given me encuentro en la interfaz de plan Premium
-     When seleccione la opcion de solicitar tarjeta BIKERENT y registre los campos solicitados
-     Then me aparecera el mensaje de "El tiempo maximo de verificacion de datos es de 72 hrs, luego se le contactara para realizar el envio".
-    Scenario: Solicitud no exitosa.
-    Given  me encuentro en la interfaz de plan Premium
-     When seleccione la opcion de solicitar tarjeta BIKERENT y no registre los campos solicitados
-     Then me aparecera el mensaje de "Error, intentelo nuevamente".
+    Scenario: Pago del plan exitoso.
+    Given me encuentro en la interfaz principal
+     When haya seleccionado alguno de los planes
+     Then podré realizar el pago del plan seleccionado.
+     
+    Scenario: Pago del plan no exitoso.
+    Given  me encuentro en la interfaz principal
+     When no haya seleccionado ninguno de los planes
+     Then no podré proceder a realizar el pago correspondiente.
