@@ -1,11 +1,9 @@
-Scenario: Revisión de solicitudes exitoso.
-    Given me encuentro en la interfaz de reserva 
-    When seleccione la opción de solicitudes 
-    Then podré visualizar las peticiones de alquiler de bicicletas de los clientes, 
-    And así realizarlo luego de mi confirmación.
+Scenario: Solicitud exitosa.
+    Given me encuentro en la interfaz de plan Premium
+    When seleccione la opción de solicitar tarjeta BIKERENT y registre los campos solicitados
+    Then me aparecerá el mensaje de “El tiempo máximo de verificación de datos es de 72 hrs, luego se le contactará para realizar el envío”.
 
-Scenario: Revisión de solicitudes no exitoso.
-    Given me encuentro en la interfaz de reserva 
-    When seleccione la opción de solicitudes
-    And este no cargue o se ralentice 
-    Then me aparecerá el mensaje de “Intente revisar más tarde”.
+Scenario: Solicitud no exitosa.
+    Given me encuentro en la interfaz de plan Premium
+    When la opción de solicitar tarjeta BIKERENT y no registre los campos solicitados
+    seleccione me aparecerá el mensaje de “Error, inténtelo nuevamente”.
