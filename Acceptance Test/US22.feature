@@ -1,8 +1,11 @@
-    Scenario:  Envio exitoso.
-    Given me encuentro en la interfaz de Clientes Premium
-     When seleccione la opcion de tarjeta BIKERENT
-     Then podre aceptar las solicitudes de los clientes y ver su informacion personal para luego contactarlos y planear su envio.
-    Scenario:  Envio no exitoso.
-    Given  me encuentro en la interfaz de Clientes Premium
-     When seleccione la opcion de tarjeta BIKERENT y ocurra un problema
-     Then  me aparecera el mensaje de "Intentelo nuevamente".
+    Scenario:  Registro de ubicación exitosa.
+    Given he iniciado sesión
+    And aparezca la interfaz de registro de ubicación actual
+     When registre mi ubicación
+     Then podré proceder al alquiler.
+     
+    Scenario:  Registro de ubicación no exitosa.
+    Given  he iniciado sesión
+    And aparezca la interfaz de registro de ubicación actual
+     When registre mi ubicación de manera incorrecta o no lo haga
+     Then  aparecerá un mensaje como: “Vuelva a intentarlo más tarde”.
