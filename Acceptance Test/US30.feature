@@ -1,11 +1,10 @@
-Scenario: Ingresar Cupones con éxito
-    Given me encuentro en la interfaz de compra
-    When ingrese un código de cupón válido
-    And seleccione “Aplicar Cupón”
-    Then me saldrá un mensaje indicando “Cupón aplicado con éxito”
+Scenario: Privacidad del usuario exitosa.
+    Given me encuentro en la interfaz de perfil de usuario
+    When seleccione entre perfil privado o público
+    Then se cambiará la privacidad de la cuenta.
 
-Scenario: Ingresar Cupones sin éxito
-    Given me encuentro en la interfaz de compra
-    When ingrese un código de cupón inválido
-    And seleccione “Aplicar Cupón”
-    Then me saldrá un mensaje indicando “Error, el código de cupón ingresado es incorrecto”
+Scenario: Privacidad del usuario no exitosa.
+    Given me encuentro en la interfaz de perfil de usuario
+    When seleccione entre perfil privado o público 
+    And ocurra un error
+    Then no se cambiará la privacidad de la cuenta.
