@@ -1,9 +1,14 @@
-Scenario: Deshabilitar modelos fuera de stock 
-Given dialogo con los administradores, mientras se encuentran en la seccion de productos y seleccionen el boton de configurar
-When escojan la opcion de deshabilitar modelo y seleccionen el modelo que no esta disponible
-Then se guardara el cambio, tambien se visualizara que no esta en la lista de productos.
+Scenario: Búsqueda de modelos de bicicletas disponible
+Given me encuentro en la sección de búsqueda
+When ingrese el nombre del modelo de la bicicleta en el motor de búsqueda
+Then visualizaré la bicicleta que ingresé en el motor de búsqueda.
 
-Scenario: Habilitar modelos nuevamente en stock.
-Given dialogo con los administradores, mientras se encuentran en la seccion de productos y seleccionen el boton de configurar
-When escojan la opcion de volver habilitar modelo y lo realicen
-Then se guardara el cambio, tambien se visualizara que se encuentra en la lista de productos.
+Scenario: Búsqueda de modelos de bicicletas no disponible.
+Given me encuentro en la sección de búsqueda
+When ingrese el nombre del modelo de la bicicleta en el motor de búsqueda
+Then visualizaré un mensaje de no disponible.
+
+Scenario: Búsqueda de modelos de bicicletas por filtros.
+Given me encuentro en la sección de búsqueda
+When modifique el filtro de las características a mi preferencia
+Then visualizaré todos los modelos que cumplen con el filtrado de características.
