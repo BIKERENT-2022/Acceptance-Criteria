@@ -1,9 +1,10 @@
-    Scenario: Pago exitoso.
-    Given me encuentro en la interfaz de carrito
-     When seleccione la opción de tarjeta Finalizar alquiler 
-     Then podré seleccionar el método de pago y agregar mi tarjeta o ingresar el monto en efectivo. 
-    Scenario: Pago no exitoso.
-    Given me encuentro en la interfaz de carrito 
-     When seleccione la opción de tarjeta Finalizar alquiler y ocurra un problema 
-     Then me aparecerá el mensaje de “Inténtelo nuevamente o escoja otro método de pago”.
+    Scenario: Modificación de ubicación exitosa.
+    Given me encuentro en la interfaz de perfil
+     When seleccione el icono de “Lápiz”
+     Then podré modificar la ubicación.
+     
+    Scenario: Modificación de ubicación exitosa.
+    Given me encuentro en la interfaz de perfil
+     When seleccione el icono de “Lápiz” y ocurra un error
+     Then aparecerá un mensaje como: “Ubicación no registrada, vuelva a intentarlo”.
     
