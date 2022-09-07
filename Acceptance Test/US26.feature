@@ -10,3 +10,4 @@ Scenario: Ingresar Cupones sin éxito.
     When ingrese un código de cupón inválido junto con la información pertinente
     And seleccione “Aceptar"
     Then el cupón no será aplicado.
+    
