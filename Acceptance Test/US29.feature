@@ -1,11 +1,12 @@
-Scenario: Cupón y asignación exitosa.
-    Given me encuentro en la interfaz de modelos de bicicletas
-    When seleccione la opción de crear cupón 
-    And elija la bicicleta a ofertar
-    Then podré ofrecer un descuento por ese modelo en específico Y asignarlo a un cliente Premium, que se encuentra en el interfaz de Clientes Premium.
-Scenario: Cupón y asignación no exitosa.
-    Given me encuentro en la interfaz de modelos de bicicletas
-    When seleccione la opción de crear cupón 
-    And elija la bicicleta a ofertar 
-    Then podré ofrecer un descuento por ese modelo en específico Y asignarlo a un cliente Premium, si ocurre un error aparecerá el mensaje de “Error, intente de nuevo más tarde”.
-
+Scenario: Afiliación de tarjeta exitosa.
+    Given que me encuentro en interfaz de afiliar tarjeta
+    And seleccione tarjeta de crédito o débito
+    When ingrese los datos de la tarjeta correctamente
+    Then visualizaré un mensaje de afiliación exitosa.
+    
+Scenario: Afiliación de tarjeta fallida.
+    Given que me encuentro en interfaz de afiliar tarjeta
+    And seleccione tarjeta de crédito o débito
+    When ingrese los datos de la tarjeta incorrectamente
+    Then visualizaré un mensaje de afiliación fallida
+    And visualizaré un botón de intentar otra vez.
