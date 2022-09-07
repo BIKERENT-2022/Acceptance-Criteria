@@ -1,8 +1,17 @@
-    Scenario: Registro modelo de bicicleta exitoso.
-    Given dialogo con los administradores y ellos se encuentren en el interfaz de alquiler de bicicletas
-     When seleccionen la opcion para añadir bicicletas, podran añadir nuevos tipos con sus imagenes 
-     Then aparecera un mensaje de registro exitoso.
-    Scenario: Registro modelo de bicicleta no exitoso.
-    Given dialogo con los administradores y ellos se encuentren en el interfaz de alquiler de bicicletas
-     When seleccionen la opcion para añadir bicicletas, podran añadir nuevos tipos con sus imagenes, si esto se ralentiza
-     Then aparecera un mensaje de registro no exitoso y pedira volver a registrar.
+Scenario: Visualizar localización de bicicletas.
+Given me encuentro en la interfaz de vista de bicicletas
+When seleccione el detalle de la bicicleta alquilada 
+And el alquiler se encuentre activo
+Then podré visualizar el lugar en donde se encuentra.
+
+Scenario: Pausar movimiento de la bicicleta.
+Given me encuentro en la interfaz de vista de bicicletas
+When seleccione el detalle de la bicicleta alquilada 
+And seleccione finalizar
+Then podré pausar el movimiento de la bicicleta alquilada, lo cual ayudará en emergencias.
+
+Scenario: Iniciar movimiento de la bicicleta.
+Given me encuentro en la interfaz de vista de bicicletas
+When seleccione el detalle de la bicicleta alquilada 
+And seleccione iniciar
+Then podré iniciar el movimiento de la bicicleta alquilada.
