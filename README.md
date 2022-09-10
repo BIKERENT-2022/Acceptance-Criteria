@@ -1,2 +1,2 @@
 # BIKERENT-PROJECT-ACCEPTANCE-CRITERIA
-Proyecto propuesto para el ciclo 2022-1 UPC.
+Proyecto propuesto para el ciclo 2022-1 y 2022-2 UPC.
